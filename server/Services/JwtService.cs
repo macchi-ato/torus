@@ -17,7 +17,7 @@ namespace server.Services
 
         public string GenerateToken(User user)
         {
-            var key = _config["JwtSettings:key"];
+            var key = _config["JwtSettings:key"] ?? throw new InvalidOperationException("JWT key is not configured");
             var issuer = _config["JwtSettings:Issuer"];
             var audience = _config["JwtSettings:Audience"];
 
