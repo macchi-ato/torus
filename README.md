@@ -45,20 +45,22 @@ CREATE DATABASE torus;
 
 ### 3. Configure the server
 
-The API uses [.NET User Secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) to store the database connection string outside of source control.
+The API uses [.NET User Secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets) to store sensitive configuration outside of source control.
 
 ```bash
 cd server
 dotnet restore
 ```
 
-Set your MySQL connection string as a user secret:
+Set your MySQL connection string and JWT signing key as user secrets:
 
 ```bash
 dotnet user-secrets set "ConnectionStrings:DefaultConnection" "Server=localhost;Database=torus;User=root;Password=<your-mysql-password>;"
+dotnet user-secrets set "JwtSettings:Key" "<a-random-string-at-least-32-characters-long>"
 ```
 
-> Replace `<your-mysql-password>` with your actual MySQL root password (or whichever user you created).
+> Replace `<your-mysql-password>` with your actual MySQL root password (or whichever user you created).  
+> Replace `<a-random-string-at-least-32-characters-long>` with any secure random string (32+ characters). This is used to sign JWT tokens.
 
 ### 4. Apply database migrations
 
