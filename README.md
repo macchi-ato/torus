@@ -24,14 +24,6 @@ Make sure you have the following installed before continuing:
 - [Node.js](https://nodejs.org/) (v18+ recommended)
 - [MySQL](https://dev.mysql.com/downloads/) (8.0+)
 
-Verify your installations:
-
-```bash
-dotnet --version   # should print 8.x.x
-node --version     # should print v18+ or v20+
-mysql --version
-```
-
 ---
 
 ## Getting Started
@@ -39,7 +31,7 @@ mysql --version
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/torus.git
+git clone https://github.com/macchi-ato/torus.git
 cd torus
 ```
 
@@ -84,8 +76,6 @@ dotnet ef database update
 dotnet run
 ```
 
-The API will start on **https://localhost:7125**.
-
 ### 6. Set up and run the client
 
 Open a **new terminal**, then:
@@ -95,8 +85,6 @@ cd client
 npm install
 npm run dev
 ```
-
-The frontend will start on **http://localhost:5173**.
 
 ---
 
