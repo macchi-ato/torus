@@ -1,3 +1,5 @@
+> This app was cloned from my old (inactive) GitHub account [vidalgmartin](https://github.com/vidalgmartin).
+
 # Torus — 3D Model Sharing Platform
 
 A full-stack web application for uploading, viewing, and sharing 3D models (`.glb` files) rendered in the browser. Users can sign up, manage a profile, upload models, and browse a community feed.
